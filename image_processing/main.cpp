@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     main_process m;
     // myrandom rans;
-    m.Loadfile("/home/mnp/Documents/Donationsite/donation-site/public/moon-solid-full.ppm");
+    m.Loadfile("ีuse ppm file only ");
     // m.showRGBmin();
     m.Invert();
     //m.Grayscale();
