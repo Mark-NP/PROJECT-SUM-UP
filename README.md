@@ -14,6 +14,9 @@ if u are using cmake to run
 
 or yeah change a code more , like sorry i just made for my self not the actual project 
 
+
+AND I KNOW OK!!!!!! That the image processing things i should not use vector just use normal array because it's already have a size in ppm file like sorry this is my old project man  
+
 งั้น… ก็เอ่อ ใช่ ยินดีต้อนรับนะ ผมดีใจมากที่คุณได้เห็นโปรเจ็กต์ของผม
 ยังไงก็อย่าคาดหวังว่าโค้ดจะดีมากนะ บางไฟล์นี่ก็หนักอยู่เหมือนกัน ผมนี่เขียนทุกอย่างยัดรวมไว้ไฟล์เดียวเลย แต่ก็ทำไว้เพื่อการเรียนรู้ล้วน ๆ ไม่ได้ตั้งใจให้เป็นโปรเจ็กต์จริงจังอะไร
 
