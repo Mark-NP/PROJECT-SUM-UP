@@ -1,0 +1,3 @@
+/home/mnp/Documents/real_calculator_just_command/build/CMakeFiles/main.dir
+/home/mnp/Documents/real_calculator_just_command/build/CMakeFiles/edit_cache.dir
+/home/mnp/Documents/real_calculator_just_command/build/CMakeFiles/rebuild_cache.dir

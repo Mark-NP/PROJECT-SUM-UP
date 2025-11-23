@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/mnp/Documents/prison_d/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/main.cpp.o -c /home/mnp/Documents/prison_d/main.cpp",
+  "file": "/home/mnp/Documents/prison_d/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+},
+{
+  "directory": "/home/mnp/Documents/prison_d/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/text_editor.cpp.o -c /home/mnp/Documents/prison_d/text_editor.cpp",
+  "file": "/home/mnp/Documents/prison_d/text_editor.cpp",
+  "output": "CMakeFiles/main.dir/text_editor.cpp.o"
+}
+]

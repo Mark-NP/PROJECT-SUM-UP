@@ -1,0 +1,3 @@
+/home/mnp/Documents/UNIVERSAL/build/CMakeFiles/main.dir
+/home/mnp/Documents/UNIVERSAL/build/CMakeFiles/edit_cache.dir
+/home/mnp/Documents/UNIVERSAL/build/CMakeFiles/rebuild_cache.dir

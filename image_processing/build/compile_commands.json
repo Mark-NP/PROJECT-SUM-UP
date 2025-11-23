@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/mnp/Documents/image_processing/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/main.cpp.o -c /home/mnp/Documents/image_processing/main.cpp",
+  "file": "/home/mnp/Documents/image_processing/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+},
+{
+  "directory": "/home/mnp/Documents/image_processing/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/img_processing.cpp.o -c /home/mnp/Documents/image_processing/img_processing.cpp",
+  "file": "/home/mnp/Documents/image_processing/img_processing.cpp",
+  "output": "CMakeFiles/main.dir/img_processing.cpp.o"
+},
+{
+  "directory": "/home/mnp/Documents/image_processing/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/justrandom.cpp.o -c /home/mnp/Documents/image_processing/justrandom.cpp",
+  "file": "/home/mnp/Documents/image_processing/justrandom.cpp",
+  "output": "CMakeFiles/main.dir/justrandom.cpp.o"
+}
+]

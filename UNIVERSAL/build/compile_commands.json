@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/mnp/Documents/UNIVERSAL/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/main.cpp.o -c /home/mnp/Documents/UNIVERSAL/main.cpp",
+  "file": "/home/mnp/Documents/UNIVERSAL/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+},
+{
+  "directory": "/home/mnp/Documents/UNIVERSAL/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/filemanage.cpp.o -c /home/mnp/Documents/UNIVERSAL/filemanage.cpp",
+  "file": "/home/mnp/Documents/UNIVERSAL/filemanage.cpp",
+  "output": "CMakeFiles/main.dir/filemanage.cpp.o"
+},
+{
+  "directory": "/home/mnp/Documents/UNIVERSAL/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/making.cpp.o -c /home/mnp/Documents/UNIVERSAL/making.cpp",
+  "file": "/home/mnp/Documents/UNIVERSAL/making.cpp",
+  "output": "CMakeFiles/main.dir/making.cpp.o"
+}
+]

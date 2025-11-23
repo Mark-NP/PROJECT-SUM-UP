@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/mnp/Documents/wordle/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/main.cpp.o -c /home/mnp/Documents/wordle/main.cpp",
+  "file": "/home/mnp/Documents/wordle/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+},
+{
+  "directory": "/home/mnp/Documents/wordle/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/main.dir/home/mnp/Documents/image_processing/justrandom.cpp.o -c /home/mnp/Documents/image_processing/justrandom.cpp",
+  "file": "/home/mnp/Documents/image_processing/justrandom.cpp",
+  "output": "CMakeFiles/main.dir/home/mnp/Documents/image_processing/justrandom.cpp.o"
+}
+]

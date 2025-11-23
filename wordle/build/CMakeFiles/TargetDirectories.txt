@@ -1,0 +1,3 @@
+/home/mnp/Documents/wordle/build/CMakeFiles/main.dir
+/home/mnp/Documents/wordle/build/CMakeFiles/edit_cache.dir
+/home/mnp/Documents/wordle/build/CMakeFiles/rebuild_cache.dir

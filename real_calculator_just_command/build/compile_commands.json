@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/mnp/Documents/real_calculator_just_command/build",
+  "command": "/usr/bin/g++   -g -std=gnu++23 -o CMakeFiles/main.dir/main.cpp.o -c /home/mnp/Documents/real_calculator_just_command/main.cpp",
+  "file": "/home/mnp/Documents/real_calculator_just_command/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+},
+{
+  "directory": "/home/mnp/Documents/real_calculator_just_command/build",
+  "command": "/usr/bin/g++   -g -std=gnu++23 -o CMakeFiles/main.dir/fraction_mode.cpp.o -c /home/mnp/Documents/real_calculator_just_command/fraction_mode.cpp",
+  "file": "/home/mnp/Documents/real_calculator_just_command/fraction_mode.cpp",
+  "output": "CMakeFiles/main.dir/fraction_mode.cpp.o"
+}
+]

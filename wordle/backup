@@ -1,0 +1,204 @@
+#include<iostream>
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <filesystem>
+#include "/home/mnp/Documents/image_processing/justrandom.h"
+#include <thread>
+#include <vector>
+using namespace std;
+using namespace sf; 
+
+namespace fs = std::filesystem;
+namespace thread = std::this_thread;
+void apple_spawn(RenderWindow &window,int x , int y , int gridsize){
+    RectangleShape rect(Vector2f(gridsize , gridsize));
+    rect.setFillColor(Color::Red);
+    rect.setPosition(x*gridsize, y*gridsize);
+    window.draw(rect);
+    // rect.setOutlineThickness(5);
+    
+    // Vector2i xypergrid(desktop.width/gridsize , desktop.height/gridsize);    
+}
+
+void debug_pos_xy(int x , int y){
+    // cout << "x" << "        "<<"y" << endl;
+    cout << x << "        " << y << endl;
+}
+struct apple_spawn_point
+{
+    int x;
+    int y;
+};
+void swapcustom(int &a , int &b){ //work
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+    
+}
+// void compareandgetnewdirection
+void CAGND(char &current_direction , char input_direction){
+    if(current_direction == 'l' && input_direction =='r'){current_direction = 'l';return;}
+    if(current_direction == 'r' && input_direction =='l'){current_direction = 'r';return;}
+    if(current_direction == 'u' && input_direction =='d'){current_direction = 'u';return;} 
+    if(current_direction == 'd' && input_direction =='u'){current_direction = 'd';return;}
+
+    if((current_direction == 'u' || current_direction == 'd') && (input_direction == 'r' || input_direction == 'l'))
+        {current_direction = input_direction;return;}
+    
+        if((current_direction == 'l' || current_direction == 'r') && (input_direction == 'u' || input_direction == 'd'))
+        {current_direction = input_direction;return;}
+    if(current_direction == '-'){current_direction = input_direction;}
+
+}
+// bool arraycompare(){} //only for 2d array
+void swaparray(vector<int>&a , vector<int>&b){ //work
+    for(int i=0;i<a.size();i++){
+        swapcustom(a[i] , b[i]);
+    }
+}
+
+
+
+int main(int argc, char const *argv[]){
+    VideoMode desktop = VideoMode::getDesktopMode();
+    myrandom random;
+    // cout << << endl;
+    string asset_path = fs::current_path() += "asset";
+    int framelimit = 60;
+    float gridsize = 40;
+    sf::RenderWindow window(sf::VideoMode({desktop.width, desktop.height}), "WORDLE" , Style::Default);
+    window.setFramerateLimit(framelimit);    
+    // CircleShape Round(15.f);
+    RectangleShape rect(Vector2f(gridsize , gridsize));
+    Vector2i xypergrid(desktop.width/gridsize , (desktop.height/gridsize));
+    rect.setFillColor(Color::Black);
+    rect.setOutlineColor(Color::White);
+    rect.setOutlineThickness(5);
+    
+    // Round.setFillColor(Color::White);
+    float speed = 5;
+    bool isapple_spawn = true;
+    
+    // char direction = '-';
+    // Start the game loop
+    
+    apple_spawn_point appleposition;
+    appleposition.x = random.random(0 , xypergrid.x-2);   
+    appleposition.y = random.random(0 , xypergrid.y-2);  
+    // cout << appleposition.x << endl;
+    // cout << appleposition.y << endl;
+    // cout << desktop.height/gridsize << endl;
+    // cout << desktop.width/gridsize << endl;
+    cout << "x" << "        "<<"y" << endl;
+    debug_pos_xy(appleposition.x , appleposition.y);
+    vector<float> head  = {7,3};
+    vector<vector<float>> snake = {
+        {7 , 3}, //   
+        {6 , 3}, //
+        {5 , 3}, //  
+        {4 , 3} //  
+    };
+    RectangleShape snakebody(Vector2f(gridsize , gridsize));
+    snakebody.setFillColor(Color::Green);
+
+    char input_direction = '-';
+    char current_direction = '-';
+    // char not_direction = 'l';
+    // char not_directionUD = 'U';
+    int framecounter = 0;
+    int framelimitcounter = 30;
+    vector<char> movement;
+    
+    while (window.isOpen())
+    {
+        Event event;
+        framecounter++;
+    // Process events
+        while (window.pollEvent(event))
+        {
+            // Close window: exit
+            if (event.type == Event::Closed)
+            window.close();
+            if(event.type == Event::KeyPressed){
+                if(event.key.code == Keyboard::F8){window.close();}
+                if(event.key.code == Keyboard::R){isapple_spawn = false;}
+                if(event.key.code == Keyboard::Right )
+                {input_direction = 'r';movement.push_back('r');}
+                if(event.key.code == Keyboard::Left)
+                {input_direction = 'l';movement.push_back('l');}
+                if(event.key.code == Keyboard::Up)
+                {input_direction = 'u';movement.push_back('u');}
+                if(event.key.code == Keyboard::Down)
+                {input_direction = 'd';movement.push_back('d');}
+            }
+            
+            // if(event.type == Event::KeyPressed){}
+            
+        }
+        
+        // if(Keyboard::isKeyPressed(Keyboard::W)){
+            //     while(direction == ) movement.y -= speed;}
+            // if(Keyboard::isKeyPressed(Keyboard::S)){movement.y += speed;}
+            // if(Keyboard::isKeyPressed(Keyboard::A)){movement.x -= speed;}
+            // if(Keyboard::isKeyPressed(Keyboard::D)){movement.x += speed;}
+            // Clear screen
+            // rect.move(movement);
+            window.clear(Color::Black);
+        for(int y=0;y<xypergrid.y;y++){
+                // window.draw(rect);
+            for(int x=0;x<xypergrid.x;x++){
+                rect.setPosition(x * gridsize, y * gridsize);
+                window.draw(rect);
+            }
+        }
+        for(int i=0;i<snake.size();i++){
+            for(int j=0;j<snake[i].size();j++){
+                snakebody.setPosition(snake[i][0]*gridsize , snake[i][1] * gridsize);
+                window.draw(snakebody);
+            }
+        }
+        if(movement.size() != 1){
+            movement[0] = movement[1];
+            movement.erase(movement.begin() + 1);
+        }
+        input_direction = movement[0];
+        CAGND(current_direction , input_direction);
+        if(current_direction == 'l'  && framecounter >= framelimitcounter)
+        {head[0]-=1;framecounter = 0;}
+        else if(current_direction == 'r'  && framecounter >= framelimitcounter)
+        {;head[0]+=1;framecounter = 0;}
+        else if(current_direction == 'u'  && framecounter >= framelimitcounter)
+        {;head[1]-=1;framecounter = 0;}
+        else if(current_direction == 'd'  && framecounter >= framelimitcounter)
+        {;head[1]+=1;framecounter = 0;}
+        if(head != snake[0]){
+            snake.insert(snake.begin() , head);
+            snake.pop_back();
+        }
+
+
+        if(isapple_spawn){
+            // cout << posx << endl;
+            apple_spawn(window , appleposition.x  , appleposition.y  , gridsize);       
+            // thread::sleep_for(1000ms);
+            // posx+=1;
+            
+        }
+        if(!isapple_spawn){
+            
+            appleposition.x = random.random(0 , xypergrid.x-2);
+            appleposition.y = random.random(0 , xypergrid.y-2);
+            debug_pos_xy(appleposition.x , appleposition.y);
+
+            apple_spawn(window , appleposition.x  , appleposition.y  , gridsize);
+            isapple_spawn = true;
+        }
+        // window.draw(rect);
+        // window.draw(rect);
+        // Update the window
+        window.display();
+        
+    }
+}
+// column end at 27
