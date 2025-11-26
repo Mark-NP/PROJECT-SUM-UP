@@ -22,10 +22,10 @@ template<typename t >void swap(t &a , t &b){
 
 };
 
-template<typename type >type GCD(type a , type b){
+int GCD(int a , int b){
     // if(b>a && b >= 0){swap(b , a);}
     if(a%b == 0){return b;}
-    type temp;
+    int temp;
     if(a%b != 0){
         temp = b;
         b = a%b;
@@ -34,7 +34,7 @@ template<typename type >type GCD(type a , type b){
     return GCD(a , b);
 
 }
-template<typename type >type LCM(type a , type b){
+int LCM(int a , int b){
     if(b>a){swap(b , a);}
     return (a*b)/GCD(a,b);
 
